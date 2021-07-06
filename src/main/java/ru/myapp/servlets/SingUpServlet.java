@@ -1,7 +1,7 @@
 package ru.myapp.servlets;
 
 import ru.myapp.models.User;
-import ru.myapp.repositories.UserRepositoriesInMemoryImpl;
+import ru.myapp.repositories.UserRepositoriesImpl;
 import ru.myapp.repositories.UserRepository;
 
 import javax.servlet.RequestDispatcher;
@@ -31,7 +31,7 @@ public class SingUpServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        this.userRepository = new UserRepositoriesInMemoryImpl();
+        this.userRepository = new UserRepositoriesImpl();
     }
 
     /**
