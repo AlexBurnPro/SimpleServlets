@@ -15,7 +15,8 @@ public class DbConnection {
         ResultSet resultSet = statement.executeQuery("SELECT * FROM list_user");
 
         while(resultSet.next()){
-            System.out.print(resultSet.getString("name") + " =" + resultSet.getString("password"));
+            System.out.print(resultSet.getString("name")
+                    + " =" + resultSet.getString("password"));
         }
     }
 }
